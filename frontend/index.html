@@ -1,13 +1,748 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<!-- so, you're curious what's under the hood. nope, it's not Framer. or Webflow. we have coded this. --><!DOCTYPE html><html data-scrapbook-source="https://functional.co/?ref=onepagelove" data-scrapbook-create="20251129111435029"><head><meta charset="UTF-8">
+<title>Functional - Timesheets, time off &amp; wellbeing</title>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, viewport-fit=cover">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link href="favicon-light.svg" rel="icon" type="image/svg+xml">
+
+<meta property="og:title" content="Functional - Timesheets, time off and wellbeing ">
+<meta property="og:description" content="Functional streamlines timesheets, time off and wellbeing. Purpose-built for small teams.">
+<meta property="og:image" content="https://www.functional.co/img/cover.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Functional - Timesheets, time off &amp; wellbeing">
+<meta name="twitter:description" content="Functional streamlines timesheets, time off and wellbeing. Purpose-built for small teams.">
+<meta name="twitter:image" content="https://www.functional.co/img/cover.png">
+
+
+
+
+
+
+
+<link href="css2.css" rel="stylesheet">
+
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+ 
+
+
+ </head>   
+<body>
+  <div class="overlay"></div>
+  <header class="globalheader fixed-header nav-up">
+    <div class="navigation">
+      <div class="nav-wrapper">
+      <div class="logo"><a href="#" class="header-logo" target="_parent"><img src="functional-logo.svg"></a>
+        </div>
+      <nav class="menu-items">
+        <ul>
+          <li><a href="#why" class="menu-item">Why Functional?</a></li>
+          <li><a href="#approach" class="menu-item">Our Approach</a></li>
+          <li><a href="#faq" class="menu-item">FAQ</a></li>
+         <!-- <li><a href="#" class="menu-item">Blog</a></li> -->
+        </ul>
+      </nav>
+      <div class="nav-button">
+        <a href="#waitlist" class="cta-header">Get Early Access</a>
+      </div>
+      <div class="mobile-nav">
+        <button class="menu-toggle">
+          <div class="menu-bar" data-position="top"></div>
+          <div class="menu-bar" data-position="bottom"></div>
+        </button>
+      </div>
+    </div>
+    </div>
+   
+  </header>
+
+    <section class="hero">
+      <div class="hero-wrapper">
+      <h1><span class="word">Attendance</span> <span class="word">done</span> <span class="word">right.</span> <span class="word">Wellbeing</span> <span class="word">done</span> <span class="word">better.</span></h1>
+      <div class="intro">
+        Functional is a lightweight app for small teams to streamline <span class="strong">timesheets</span>, <span class="strong">time off</span> and track <span class="strong">employee wellbeing</span>, all inside the team chat.
+      </div>
+      <div class="form-wrapper">
+      <div class="optin-form">
+        <div class="ff-6720dc1e8a283a1a894e8506 fd-form fd-focus-visible-applied" data-ff-el="root" data-ff-version="3" data-ff-type="inline" data-ff-name="inlineNoImage" data-ff-stage="default" data-ff-handle-status="initialized">
+          <span class="mail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#153035" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+          <!--tpl {% block config %} tpl-->
+          <div data-ff-el="config" data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjp0cnVlfQ==" style="display: none"></div>
+          <!--tpl {% endblock %} tpl-->
+          <div class="ff-6720dc1e8a283a1a894e8506__container">
+            <div class="ff-6720dc1e8a283a1a894e8506__wrapper">
+              <form class="ff-6720dc1e8a283a1a894e8506__form" action="https://form.flodesk.com/forms/6720dc1e8a283a1a894e8506/submit" method="post" data-ff-el="form" novalidate="">
+                <div class="ff-6720dc1e8a283a1a894e8506__content fd-form-content" data-ff-el="content">
+                  <div class="ff-6720dc1e8a283a1a894e8506__fields" data-ff-el="fields">
+                    <!--tpl {% block fields %} tpl-->
+        
+                    <div class="ff-6720dc1e8a283a1a894e8506__field fd-form-group">
+                      <input id="ff-6720dc1e8a283a1a894e8506-email" class="ff-6720dc1e8a283a1a894e8506__control fd-form-control" type="text" maxlength="255" name="email" placeholder="Enter your work email" data-ff-tab="email::submit" required="" value="">
+                    </div>
+        
+                    <input type="text" maxlength="255" name="confirm_email_address" style="display: none" value="">
+                    <!--tpl {% endblock %} tpl-->
+                  </div>
+        
+                  <div class="ff-6720dc1e8a283a1a894e8506__footer" data-ff-el="footer">
+                    <button type="submit" class="ff-6720dc1e8a283a1a894e8506__button fd-btn" data-ff-el="submit" data-ff-tab="submit">
+                      <span>Get Early Access</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="ff-6720dc1e8a283a1a894e8506__success fd-form-success" data-ff-el="success">
+                  <div class="ff-6720dc1e8a283a1a894e8506__success-message thank-you">
+                    <div>
+                      <div>
+                        <div data-paragraph="true">Hooray, you've been added to our waitlist! <br> You can also follow us on <a href="https://www.linkedin.com/company/functionalco" target="_blank">Linkedin</a>.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ff-6720dc1e8a283a1a894e8506__error fd-form-error" data-ff-el="error"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+
+    </div>
+
+      <div class="message">Good Morning</div>
+
+
+      <div class="cards-wrapper">
+          <div class="card">
+            <span class="date"><span class="mdy"><span class="day">Sat</span> November 29, 2025</span></span>
+            <span class="name"><span>Hermann Hesse</span></span>
+            <div class="status in">
+              <span class="activity">Clocked in at</span>
+              <div class="timestamp"><div class="pulsate"><span class="dot"></span> <span class="circle"></span> </div><span class="clockin">09:28</span> <span class="clockout">17:12</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="date"><span class="mdy"><span class="day">Sat</span> November 29, 2025</span></span>
+            <span class="name"><span>Susan Sontag</span></span>
+            <div class="status in">
+              <span class="activity">Clocked in at</span>
+              <div class="timestamp"><div class="pulsate"><span class="dot"></span> <span class="circle"></span> </div><span class="clockin">08:14</span> <span class="clockout">16:57</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="date"><span class="mdy"><span class="day">Sat</span> November 29, 2025</span></span>
+            <span class="name"><span>Albert Camus</span></span>
+            <div class="status in">
+              <span class="activity">Medical leave until</span>
+              <div class="timestamp strong"><span class="cal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+                  December 4</div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="date"><span class="mdy"><span class="day">Sat</span> November 29, 2025</span></span>
+            <span class="name"><span>Agatha Christie</span></span>
+            <div class="status in">
+              <span class="activity">Clocked in at</span>
+              <div class="timestamp"><div class="pulsate"><span class="dot"></span> <span class="circle"></span> </div><span class="clockin">09:01</span> <span class="clockout">17:32</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <span class="date"><span class="mdy"><span class="day">Sat</span> November 29, 2025</span></span>
+            <span class="name"><span>Clive Staples Lewis</span></span>
+            <div class="status in">
+              <span class="activity">PTO until</span>
+              <div class="timestamp strong"><span class="cal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+                  December 1</div>
+            </div>
+          </div>
+          <div class="card"></div>
+      </div>   
+      </div>
+
+
+    </section>
+    <section class="features">
+      <div class="shine"></div>
+      <div class="features-wrapper">
+      <div class="subtitle">
+        <a id="why">Why Functional?</a>
+      </div>
+
+      <div class="feature feature-wide">
+        <div class="content">
+        <div class="title">Keep your workflow, ditch the paperwork</div>
+        <div class="description">Clock in, clock out and request time off without leaving the chat app your team is using. Get reports delivered via email, added to your cloud storage and synced with your payroll software.</div>
+      </div>
+        <div class="image in-view"> 
+          <div class="graphic">
+            <div class="frame secondary">
+              <div class="central">
+                <div class="app-cloud">
+
+                </div>
+
+                <div class="sq-m">
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                </div>
+
+                <div class="statchart">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+            </div>
+            </div>
+
+            <div class="frame front">
+              <div class="central">
+                <div class="square">
+                  <img src="clock.svg" alt="timesheets">
+                </div>
+                <div class="square">
+                  <img src="person.svg" alt="wellbeing">
+                </div>
+                <div class="square">
+                  <img src="calendar.svg" alt="time off">
+                </div>
+              </div>
+
+              <div class="ruler"> 
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+              </div>
+
+              <div class="sq-l">
+                <div class="sq-m">
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                </div>
+
+                <div class="sq-m">
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                </div>
+
+                <div class="sq-m">
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                </div>
+
+                 <div class="sq-m">
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                </div>
+
+                
+
+              </div>
+         
+            </div>
+
+            <div class="frame secondary">
+              <div class="central">
+                <div class="app-mail"> </div>
+                <div class="sq-m">
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                  <span class="sq-s"></span>
+                </div>
+
+                <div class="statchart">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+            </div>
+            </div>
+            
+          </div>
+          
+
+        </div>
+      </div>
+
+      <div class="feature feature-left">
+        <div class="image in-view"> 
+          <div class="graphic">
+          <div class="frame">
+
+            <div class="sq-m">
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+            </div>
+
+            <div class="days">
+              <div class="day">M</div>
+              <div class="day">T</div>
+              <div class="day">W</div>
+              <div class="day">T</div>
+              <div class="day">F</div>
+              <div class="day">S</div>
+              <div class="day">S</div>
+            </div>
+            <div class="dates">
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="date faded">●</div>
+              <div class="marker pto"></div>
+              <div class="marker medical"></div>
+              <div class="marker special"></div>
+            </div>
+            <div class="sq-m">
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+            </div>
+          </div>
+          <div class="glow"></div>
+        </div></div>
+        <div class="content">
+        <div class="title">Use it less, automate the rest</div>
+        <div class="description">With a configuration that you can set and forget, Functional is built to reduce manual processes. Focus on the work that matters and turn hours into minutes when it comes to time management.  </div>
+        </div>
+      </div>
+
+      <div class="feature feature-right">
+        <div class="content">
+        <div class="title">Impactful decisions, based on team metrics</div>
+        <div class="description">Boost team productivity and prevent burnout by making decisions based on your team's mood and energy levels. Know exactly when to push acceleration and when to take things easy.</div>
+      </div>
+      <div class="image">
+       
+        <div class="graphic">
+          <div class="frame">
+            <div class="sq-m">
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+              <span class="sq-s"></span>
+            </div>
+            <div class="chart-wrapper">
+              <div class="waves">
+             <img src="charts.svg" alt="Use it less, automate the rest"> 
+             </div> 
+             <div class="marker">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+             </div>
+            <div class="ruler"> 
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+            </div>
+            <div class="chart">
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+              <div class="stick"></div>
+            </div>
+            <div class="glow"></div>
+            <div class="sq-m">
+            <span class="sq-s"></span>
+            <span class="sq-s"></span>
+            <span class="sq-s"></span>
+            <span class="sq-s"></span>
+            <span class="sq-s"></span>
+            <span class="sq-s"></span>
+            <span class="sq-s"></span>
+            <span class="sq-s"></span></div>
+          </div>
+          </div>
+     
+            </div>
+           
+        </div>
+  
+
+
+      </div>
+      </div>
+
+
+
+    
+    </section>
+
+    <section class="approach">
+      <div class="approach-wrapper">
+        <div class="subtitle">
+          <a id="approach">Our Approach</a>
+        </div>
+        <div class="title">Let's make software for people.</div>
+        <div class="content">
+         <p>We believe software is a tool like any other. It should help you get things done. It should be intuitive to use. It should adapt to your workflow, not force you to revamp it. It should be fast and reliable. And finally, good software should be used as little as possible. </p> 
+
+          <p>You shouldn't spend a lot of time trying to figure out how it works. You shouldn't search the manual every time you want to use it. You open it, get what you need and that's it. You forget about it after. It requires as little attention as possible. After being configured once, it mostly runs on autopilot. 
+          </p> 
+
+          <p>It isn't crammed with all the features under the sun. It has most things you need and nothing you don't. No shiny features that sound good on paper, but are rarely used. Good software doesn't make your head explode.  </p> 
+
+          <p>In a fast-paced world software should help you reduce mental clutter. It is affordable, gives you peace of mind and lets you enjoy more free time. It might even give you a reason to smile every now and then.</p> <p>That's the software we aim to build. </p> 
+      
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="faq">
+      <div class="faq-wrapper">
+        <div class="faq-left">
+        <div class="subtitle">
+          <a id="faq">Frequently Asked Questions</a>
+        </div>
+        <div class="title">Got questions? We have answers.</div>
+        </div>
+        <div class="faq-right">
+          <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-header">
+                  Why make another attendance tracking app? <span class="icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Apps that help with attendance tracking and PTO management are fundamental to any organization. Such apps should therefore be affordable, should fit into your existing workflow and require as little attention as possible. We believe none of the software currently on the market satisfies these criteria.
+                      This is why we set out to build a time tracking app that gets out of your way, works with your existing apps and is fairly priced.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-header">
+                  How is Functional different?<span class="icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>We're building Functional to be as simple as possible and to be used as little as possible (yes, that's right). We believe that teams should focus on making their customers happy and spend the absolute minimum amount of time on tracking time. Functional has all that covered, while
+                      also providing valuable insights into teams' mood and energy levels, to prevent burnouts and maximize productivity. </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-header">
+                   Is Functional right for me? <span class="icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>It depends. If you're at a small or medium sized organization and you want the absolute essentials in terms of attendance tracking and leave management, with as little friction as possible, then Functional is probably a good fit for you. Even more so if you're also looking to improve team productivity based on detailed insights. </p>
+                </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header">
+                Which chat apps will be supported at launch? <span class="icon">+</span>
+              </button>
+              <div class="faq-content">
+                  <p>We plan on supporting Twist and Slack at launch. If you're using a different chat app and want to try Functional, <a href="mailto:hey@functional.co">let us know</a> and we'll add it to our roadmap.</p>
+              </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-header">
+              We are a fully remote company. Is Functional a good fit?<span class="icon">+</span>
+            </button>
+            <div class="faq-content">
+                <p>We're firm believers in working remotely and Functional is being built from ground up to fully support remote teams. </p>
+            </div>
+        </div>
+          <div class="faq-item">
+              <button class="faq-header">
+                Can I request a feature?<span class="icon">+</span>
+              </button>
+              <div class="faq-content">
+                  <p>Of course. We'd love to hear your thoughts. Just <a href="mailto:hey@functional.co">drop us an email</a> and we'll get back to you as soon as possible.</p>
+              </div>
+          </div>
+       
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="waitlist">
+      
+      <div class="subtitle">
+        <a id="waitlist">Early Access &amp; Lifetime Discount</a>
+      </div>
+      <div class="waitlist-wrapper">
+      <div class="title">Can't wait? We neither.</div>
+      <div class="small">(BTW, Saturday is a great day to join our waitlist)</div>
+      <div class="description">We're really excited to show you what we're building. Leave us your email and you'll be notified as soon as it's ready. You'll get to test our free private beta and shape the direction of our product. We'll even give you a lifetime discount when Functional is released. Sounds good?</div>
+      <div class="optin-form">
+        <div class="ff-6720dc1e8a283a1a894e8506 fd-form fd-focus-visible-applied" data-ff-el="root" data-ff-version="3" data-ff-type="inline" data-ff-name="inlineNoImage" data-ff-stage="default" data-ff-handle-status="initialized">
+          <span class="mail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#153035" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+          <!--tpl {% block config %} tpl-->
+          <div data-ff-el="config" data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjp0cnVlfQ==" style="display: none"></div>
+          <!--tpl {% endblock %} tpl-->
+          <div class="ff-6720dc1e8a283a1a894e8506__container">
+            <div class="ff-6720dc1e8a283a1a894e8506__wrapper">
+              <form class="ff-6720dc1e8a283a1a894e8506__form" action="https://form.flodesk.com/forms/6720dc1e8a283a1a894e8506/submit" method="post" data-ff-el="form" novalidate="">
+                <div class="ff-6720dc1e8a283a1a894e8506__content fd-form-content" data-ff-el="content">
+                  <div class="ff-6720dc1e8a283a1a894e8506__fields" data-ff-el="fields">
+                    <!--tpl {% block fields %} tpl-->
+        
+                    <div class="ff-6720dc1e8a283a1a894e8506__field fd-form-group">
+                      <input id="ff-6720dc1e8a283a1a894e8506-email" class="ff-6720dc1e8a283a1a894e8506__control fd-form-control" type="text" maxlength="255" name="email" placeholder="Enter your work email" data-ff-tab="email::submit" required="" value="">
+                    </div>
+        
+                    <input type="text" maxlength="255" name="confirm_email_address" style="display: none" value="">
+                    <!--tpl {% endblock %} tpl-->
+                  </div>
+        
+                  <div class="ff-6720dc1e8a283a1a894e8506__footer" data-ff-el="footer">
+                    <button type="submit" class="ff-6720dc1e8a283a1a894e8506__button fd-btn" data-ff-el="submit" data-ff-tab="submit">
+                      <span>Get Early Access</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="ff-6720dc1e8a283a1a894e8506__success fd-form-success" data-ff-el="success">
+                  <div class="ff-6720dc1e8a283a1a894e8506__success-message thank-you">
+                    <div>
+                      <div>
+                        <div data-paragraph="true">Hooray, you've been added to our waitlist! <br> You can also follow us on <a href="https://www.linkedin.com/company/functionalco" target="_blank">Linkedin</a>.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ff-6720dc1e8a283a1a894e8506__error fd-form-error" data-ff-el="error"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    </section>
+
+    <footer>
+      <div class="shine"></div>
+      <div class="footer-wrapper">
+        <div class="footer-left">
+        <div class="logo"><img src="logo-light.svg" alt="Functional" width="25"></div>
+        <div class="copyright"><span>© 2025 Functional. All rights reserved.</span> </div>
+        <div class="builtin"><span>Designed &amp; built remotely in the EU</span> <img src="eu-flag.svg"> </div>
+        </div>
+        <div class="footer-right">
+          <div class="legal"><!--<span><a href="#">Terms and Conditions </a></span>--> <span><a href="https://functional.co/privacy" target="_blank">Privacy Policy</a></span></div>
+        <div class="linkedin">Follow us on <a href="https://www.linkedin.com/company/functionalco" target="_blank">Linkedin</a></div>
+      </div>
+      </div>
+    </footer>
+
+
+
+
+
+</body></html>
