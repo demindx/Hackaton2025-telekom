@@ -97,12 +97,12 @@ video {
   align-items: center;
   justify-content: center;
   transition: background 0.25s ease, transform 0.2s ease;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .send-btn:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .send-btn .icon {
@@ -112,6 +112,7 @@ video {
   justify-content: center;
   color: #fff;
 }
+
 .icon-send {
   opacity: 1;
   transform: translateY(0);
@@ -146,10 +147,11 @@ video {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #999; 
+  color: #999;
 }
+
 .search-wrapper input {
-  padding-left: 40px !important; /
+  padding-left: 40px !important;
 }
 
 
@@ -166,17 +168,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -184,6 +190,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -207,11 +214,9 @@ html {
 
 body {
   background: url("grain.png"),
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       rgba(252, 210, 205, 1) 15%,
-      rgba(189, 183, 213, 1) 65%
-    );
+      rgba(189, 183, 213, 1) 65%);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -244,22 +249,22 @@ header {
 
 header .navigation {
   /*background-color: #FAF7F4; */
-  background: radial-gradient(
-    ellipse at 50% 100px,
-    rgba(250, 247, 244, 0.3),
-    rgba(250, 247, 244, 1)
-  );
+  background: radial-gradient(ellipse at 50% 100px,
+      rgba(250, 247, 244, 0.3),
+      rgba(250, 247, 244, 1));
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   width: 100%;
   border-radius: 16px;
   /*  box-shadow: 0px 4px 4px 0px rgba(121,130,156,1), 0px 15px 25px 0px rgba(0,0,0,0.15); /*  shadow gray */
   box-shadow: 0px 4px 4px 0px rgba(153, 126, 152, 1),
-    0px 15px 25px 0px rgba(0, 0, 0, 0.15); /* shadow sunrise */
+    0px 15px 25px 0px rgba(0, 0, 0, 0.15);
+  /* shadow sunrise */
   /* box-shadow: 0px 4px 4px 0px rgba(160,161,147,1), 0px 15px 25px 0px rgba(0,0,0,0.15); /* shadow light gray */
   padding: 8px 8px 8px 20px;
   /* border: 1px solid #fff; /* light gray */
-  border: 1px solid #faf7f4; /* gray and sunset */
+  border: 1px solid #faf7f4;
+  /* gray and sunset */
   transition: all 0.8s ease-in-out;
 }
 
@@ -272,11 +277,9 @@ header .navigation .nav-wrapper {
 header.fixed-header .navigation {
   border: 1px solid transparent;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  background: radial-gradient(
-    ellipse at 50% 100px,
-    rgba(250, 247, 244, 0.75),
-    rgba(250, 247, 244, 0.8)
-  );
+  background: radial-gradient(ellipse at 50% 100px,
+      rgba(250, 247, 244, 0.75),
+      rgba(250, 247, 244, 0.8));
   transition: all 0.5s linear;
 }
 
@@ -443,6 +446,7 @@ section.hero .intro {
     width: 0px;
     overflow: hidden;
   }
+
   100% {
     width: 100%;
     overflow: visible;
@@ -476,24 +480,19 @@ section.waitlist {
 }
 
 section.features {
-  background: #172128
-    radial-gradient(
-      40% 10% at center 0%,
+  background: #172128 radial-gradient(40% 10% at center 0%,
       rgba(255, 255, 255, 0.1) 4%,
       rgba(98, 255, 179, 0) 70%,
-      rgba(23, 33, 40, 0) 100%
-    );
+      rgba(23, 33, 40, 0) 100%);
   position: relative;
 }
 
 .shine {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(252, 255, 255, 0.8) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(252, 255, 255, 0.8) 50%,
+      rgba(0, 0, 0, 0) 100%);
   position: absolute;
   top: 1px;
   left: 0;
@@ -533,11 +532,9 @@ section.waitlist .subtitle {
 section.features .subtitle,
 section.waitlist .subtitle {
   color: #fff;
-  background: linear-gradient(
-    135deg,
-    rgba(252, 210, 205, 1) 15%,
-    rgba(189, 183, 213, 1) 65%
-  );
+  background: linear-gradient(135deg,
+      rgba(252, 210, 205, 1) 15%,
+      rgba(189, 183, 213, 1) 65%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -595,18 +592,15 @@ section.features .feature-wide .image {
 }
 
 section.features .feature-wide .frame {
-  transform: perspective(1500px) translate3d(0px, 0px, -250px) rotateX(27deg)
-    scale(0.9, 0.9);
+  transform: perspective(1500px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
   box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
   transition: 0.4s ease-in-out transform;
 }
 
 .feature.feature-wide .frame.front {
-  background: linear-gradient(
-    225deg,
-    rgba(250, 247, 244, 0.1) -25%,
-    rgba(16, 25, 32, 0.2) 35%
-  );
+  background: linear-gradient(225deg,
+      rgba(250, 247, 244, 0.1) -25%,
+      rgba(16, 25, 32, 0.2) 35%);
 }
 
 .feature.feature-wide .in-view .frame {
@@ -620,11 +614,9 @@ section.features .feature-wide .frame {
 
 .feature.feature-wide .in-view .frame:last-of-type {
   transform: perspective(1000px) rotateY(-25deg);
-  background: linear-gradient(
-    225deg,
-    rgba(250, 247, 244, 0.1) -25%,
-    rgba(16, 25, 32, 0.2) 35%
-  );
+  background: linear-gradient(225deg,
+      rgba(250, 247, 244, 0.1) -25%,
+      rgba(16, 25, 32, 0.2) 35%);
 }
 
 .feature.feature-wide .in-view .frame.secondary:first-of-type {
@@ -799,11 +791,9 @@ section.features .feature-wide .frame {
   width: 64px;
   height: 64px;
   outline: 5px solid #141a1f;
-  background: linear-gradient(
-    320deg,
-    rgba(81, 87, 92, 0.6) -25%,
-    rgba(36, 48, 58, 0.5) 35%
-  );
+  background: linear-gradient(320deg,
+      rgba(81, 87, 92, 0.6) -25%,
+      rgba(36, 48, 58, 0.5) 35%);
   box-shadow: inset 0px -1px 1px 0px rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
@@ -814,11 +804,9 @@ section.features .feature-wide .frame {
 }
 
 .feature-wide .frame.front .central .square:nth-child(2) {
-  background: linear-gradient(
-    320deg,
-    rgba(81, 87, 92, 0.9) -25%,
-    rgba(36, 48, 58, 0.8) 35%
-  );
+  background: linear-gradient(320deg,
+      rgba(81, 87, 92, 0.9) -25%,
+      rgba(36, 48, 58, 0.8) 35%);
 }
 
 .feature-wide .frame .central {
@@ -1317,11 +1305,9 @@ section.features .feature-right .content .description {
     100px 100px 80px rgba(0, 0, 0, 0.07);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  background: linear-gradient(
-    135deg,
-    rgba(250, 247, 244, 0.1) -35%,
-    rgba(16, 25, 32, 0.2) 35%
-  );
+  background: linear-gradient(135deg,
+      rgba(250, 247, 244, 0.1) -35%,
+      rgba(16, 25, 32, 0.2) 35%);
   position: relative;
   z-index: 1;
   transition: transform 1s ease 0s;
@@ -1337,11 +1323,9 @@ section.features .feature-right .content .description {
 .feature.feature-right .frame {
   width: 580px;
   height: 400px;
-  background: linear-gradient(
-    -135deg,
-    rgba(250, 247, 244, 0.1) -25%,
-    rgba(16, 25, 32, 0.2) 35%
-  );
+  background: linear-gradient(-135deg,
+      rgba(250, 247, 244, 0.1) -25%,
+      rgba(16, 25, 32, 0.2) 35%);
 }
 
 .feature.feature-left .in-view .frame {
@@ -1747,24 +1731,19 @@ section.waitlist .waitlist-wrapper {
 footer {
   width: 100%;
   background: url("grain.png"),
-    #000
-      radial-gradient(
-        70% 90% at center 0%,
-        rgba(255, 255, 255, 0.1) 4%,
-        rgba(98, 255, 179, 0) 70%,
-        rgba(23, 33, 40, 0) 100%
-      );
+    #000 radial-gradient(70% 90% at center 0%,
+      rgba(255, 255, 255, 0.1) 4%,
+      rgba(98, 255, 179, 0) 70%,
+      rgba(23, 33, 40, 0) 100%);
   position: relative;
 }
 
 footer .shine {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(252, 255, 255, 0.1) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(252, 255, 255, 0.1) 50%,
+      rgba(0, 0, 0, 0) 100%);
 }
 
 footer .footer-wrapper {
@@ -1967,9 +1946,11 @@ footer .footer-wrapper .builtin img {
   0% {
     transform: translate(-45%, 0);
   }
+
   50% {
     transform: translate(-55%, 0);
   }
+
   100% {
     transform: translate(-50%, 0);
   }
@@ -2225,6 +2206,7 @@ footer .footer-wrapper .builtin img {
   0% {
     transform: translate(0, 100%);
   }
+
   100% {
     transform: translate(0, 0);
   }
@@ -2234,6 +2216,7 @@ footer .footer-wrapper .builtin img {
   0% {
     transform: translate(0, -120%);
   }
+
   100% {
     transform: translate(0, 0);
   }
@@ -2244,9 +2227,11 @@ footer .footer-wrapper .builtin img {
     transform: scale(0.1, 0.1);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: scale(1.4, 1.4);
     opacity: 0;
@@ -2387,11 +2372,10 @@ footer .footer-wrapper .builtin img {
 body .overlay {
   background: rgb(252, 210, 205);
   background: url("grain.png"),
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       rgba(252, 210, 205, 1) 15%,
-      rgba(189, 183, 213, 1) 65%
-    ); /* bg sunrise */
+      rgba(189, 183, 213, 1) 65%);
+  /* bg sunrise */
 
 }
 
@@ -2529,11 +2513,9 @@ body.noscroll .overlay {
   }
 
   .navigation.active {
-    background: radial-gradient(
-      ellipse at 50% 100px,
-      rgba(250, 247, 244, 0.8),
-      rgba(250, 247, 244, 1)
-    );
+    background: radial-gradient(ellipse at 50% 100px,
+        rgba(250, 247, 244, 0.8),
+        rgba(250, 247, 244, 1));
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   }
 
@@ -2983,13 +2965,10 @@ body.noscroll .overlay {
 /* PRIVACY */
 
 section.privacy {
-  background: #172128
-    radial-gradient(
-      40% 10% at center 0%,
+  background: #172128 radial-gradient(40% 10% at center 0%,
       rgba(255, 255, 255, 0.1) 4%,
       rgba(98, 255, 179, 0) 70%,
-      rgba(23, 33, 40, 0) 100%
-    );
+      rgba(23, 33, 40, 0) 100%);
   width: 100%;
   padding: 80px 0;
 }
