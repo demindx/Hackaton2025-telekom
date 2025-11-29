@@ -10,7 +10,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Robot", sans-serif;
     overflow-x: hidden;
     background: url("../grain.png"),
         linear-gradient(135deg, rgba(252,210,205,1) 15%, rgba(189,183,213,1) 65%);
@@ -18,6 +18,7 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 /* -------------------------
    SIDEBAR (History)
@@ -61,7 +62,7 @@ html, body {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 4px;
-    color: #1a1a1a;
+    color: #565656;
 }
 
 .chat-preview {
@@ -117,7 +118,7 @@ html, body {
     border-radius: 16px;
     font-size: 16px;
     line-height: 1.45;
-    color: #1a1a1a;
+    color: #565656;
     max-width: 740px;
     width: fit-content;
     word-wrap: break-word;
@@ -208,7 +209,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.2);
+    background: rgba(214, 1, 1, 0.2);
     border-radius: 10px;
 }
 
@@ -220,6 +221,7 @@ html, body {
   opacity: 0;
   padding-bottom: 10px;
   display: inline-block;
+color: #565656;
   animation: fadeWord 0.7s forwards;
 }
 
@@ -238,6 +240,7 @@ html, body {
 .small-word {
   opacity: 0;
   padding-top: 5px;
+   color: #6e6e6e;
   display: inline-block;
   animation: fadeSmall 0.5s forwards;
 }
