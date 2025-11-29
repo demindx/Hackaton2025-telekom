@@ -3,16 +3,28 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-
     ports:
-      - 5173:5173
+      - "5173:5173"
+    restart: unless-stopped
+
+    # Добавьте volumes для фронтенда если нужен hot-reload
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
 
   backend:
     build:
-      context: ./backend/
+      context: ./backend
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
-
+      - "8080:8080"
+    restart: unless-stopped
     volumes:
-      - ./backend:/app
+
+      # Монтируем только исходный код, исключая .venv
+      - ./backend/app:/app/app
+      - ./backend/pyproject.toml:/app/pyproject.toml
+      - ./backend/uv.lock:/app/uv.lock
+
+    environment:
+      - PYTHONPATH=/app
