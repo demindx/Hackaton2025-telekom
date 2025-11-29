@@ -87,46 +87,86 @@ video {
   vertical-align: baseline;
 }
 
-.send-btn {
+.chat-input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 40px;
+}
+
+.chat-input-box {
+  width: min(700px, 94%);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  padding: 10px 50px 10px 16px;
+  display: flex;
   position: relative;
-  width: 48px;
-  height: 48px;
+}
+
+.chat-input-box textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Inter Tight", sans-serif;
+  color: #333;
+  overflow-y: hidden;
+}
+
+/* send button */
+.send-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: background 0.25s ease, transform 0.2s ease;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease, background 0.25s ease;
 }
 
-.send-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+.send-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
+/* icons */
 .send-btn .icon {
-  align-items: center;
-  border-radius: 3.40282e+38px;
-  display: flex;
-  justify-content: center;
-  color: #fff;
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  position: absolute;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+/* default: send icon */
 .icon-send {
   opacity: 1;
   transform: translateY(0);
-  color: #fff;
-
 }
 
+/* arrow hidden initially */
 .icon-up {
   opacity: 0;
-  color: #fff;
-
   transform: translateY(6px);
 }
 
+/* when active (text entered) */
 .send-btn.active .icon-send {
   opacity: 0;
   transform: translateY(-6px);
@@ -135,23 +175,6 @@ video {
 .send-btn.active .icon-up {
   opacity: 1;
   transform: translateY(0);
-}
-
-.search-wrapper {
-  position: relative;
-}
-
-.search-wrapper .search-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #999;
-}
-
-.search-wrapper input {
-  padding-left: 40px !important;
 }
 
 
