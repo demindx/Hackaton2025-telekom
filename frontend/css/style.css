@@ -94,16 +94,30 @@ video {
   padding: 20px 0 40px;
 }
 
-.chat-input-box {
-  width: min(700px, 94%);
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 16px;
-  padding: 10px 50px 10px 16px;
-  display: flex;
-  position: relative;
+.chat-input-bar {
+    position: fixed;
+    bottom: 0;
+    left: 260px; /* sidebar width */
+    right: 0;
+    padding: 20px 40px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
 }
+
+.chat-input-box {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 
 .chat-input-box textarea {
   width: 100%;
@@ -116,6 +130,29 @@ video {
   font-family: "Inter Tight", sans-serif;
   color: #333;
   overflow-y: hidden;
+}
+
+
+#chat-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#chat-send-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:#a10000;
+    opacity: 0.5;
+}
+
+#chat-send-btn.active {
+    opacity: 1;
 }
 
 /* send button */
@@ -462,6 +499,18 @@ section.hero h1 .word {
   opacity: 0;
   filter: blur(10px) brightness(0%);
 }
+
+.hero {
+    margin-left: 200px; /* бо sidebar */
+    padding: 0 40px;
+    height: calc(100vh - 160px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* вертикальне центрування */
+    align-items: center;
+    text-align: center;
+}
+
 
 section.hero h1 .word:first-child {
   animation: 0.6s reveal-blur linear forwards 0.2s;
