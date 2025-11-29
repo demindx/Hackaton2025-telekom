@@ -6,20 +6,17 @@ const heroSection = document.getElementById("hero-section");
 const historyList = document.querySelector(".history-list");
 const newChatBtn = document.querySelector(".new-chat-btn");
 
-// усередині hero-section: текст, який треба ховати, але не інпут
-const heroTitle = heroSection ? heroSection.querySelector("h1") : null;
-const heroIntro = heroSection ? heroSection.querySelector(".intro") : null;
-
 // ================== STATE ==================
 let chats = [];
 let activeChatId = null;
 
-// --------- LocalStorage helpers ----------
+// ================== LOCAL STORAGE HELPERS ==================
 function loadChats() {
   try {
     const raw = localStorage.getItem("chats");
     chats = raw ? JSON.parse(raw) : [];
-  } catch {
+  } catch (e) {
+    console.error("Failed to parse chats from localStorage", e);
     chats = [];
   }
 }
@@ -28,9 +25,22 @@ function saveChats() {
   localStorage.setItem("chats", JSON.stringify(chats));
 }
 
-// ================== RENDERING ==================
+function loadActiveChat() {
+  return localStorage.getItem("activeChatId") || null;
+}
+
+function saveActiveChat() {
+  if (activeChatId) {
+    localStorage.setItem("activeChatId", activeChatId);
+  } else {
+    localStorage.removeItem("activeChatId");
+  }
+}
+
+// ================== RENDER SIDE BAR ==================
 function renderHistory() {
   if (!historyList) return;
+
   historyList.innerHTML = "";
 
   chats.forEach((chat) => {
@@ -53,21 +63,32 @@ function renderHistory() {
   });
 }
 
+// ================== RENDER MESSAGES ==================
 function renderMessages(chat) {
   if (!chatContainer) return;
 
   chatContainer.innerHTML = "";
+
   chat.messages.forEach((msg) => {
-    const div = document.createElement("div");
-    div.classList.add("msg", "user-msg");
-    div.textContent = msg.content;
-    chatContainer.appendChild(div);
+    const bubble = document.createElement("div");
+    bubble.classList.add("msg");
+
+    if (msg.role === "user") {
+      bubble.classList.add("user-msg");
+    } else if (msg.role === "assistant") {
+      bubble.classList.add("bot-msg");
+    } else {
+      bubble.classList.add("system-msg");
+    }
+
+    bubble.textContent = msg.content;
+    chatContainer.appendChild(bubble);
   });
 
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-// ================== CHAT LOGIC ==================
+// ================== CHAT HELPERS ==================
 function createNewChat(firstMessage) {
   const id = Date.now().toString();
   const title = firstMessage.split(" ").slice(0, 6).join(" ") || "New chat";
@@ -81,6 +102,7 @@ function createNewChat(firstMessage) {
   chats.unshift(chat);
   activeChatId = id;
   saveChats();
+  saveActiveChat();
   renderHistory();
   return chat;
 }
@@ -90,30 +112,28 @@ function openChat(id) {
   if (!chat) return;
 
   activeChatId = id;
+  saveActiveChat();
 
-  // показуємо режим чату
-  if (heroTitle) heroTitle.style.display = "none";
-  if (heroIntro) heroIntro.style.display = "none";
+  if (heroSection) heroSection.style.display = "none";
   if (chatContainer) chatContainer.style.display = "block";
 
   renderMessages(chat);
   renderHistory();
 }
 
+// ================== SEND MESSAGE ==================
 function sendMessage() {
-  if (!input) return;
+  if (!input || !chatContainer) return;
 
   const text = input.value.trim();
   if (!text) return;
 
-  // ховаємо тільки текст hero, але НЕ інпут
-  if (heroTitle) heroTitle.style.display = "none";
-  if (heroIntro) heroIntro.style.display = "none";
-  if (chatContainer) chatContainer.style.display = "block";
+  if (heroSection) heroSection.style.display = "none";
+  chatContainer.style.display = "block";
 
   let chat;
   if (!activeChatId) {
-    // перше повідомлення → створюємо новий чат у sidebar
+    // перше повідомлення → створюємо новий чат
     chat = createNewChat(text);
   } else {
     chat = chats.find((c) => c.id === activeChatId);
@@ -125,26 +145,31 @@ function sendMessage() {
     }
   }
 
-  // додаємо повідомлення в DOM
-  if (chatContainer) {
-    const msgDiv = document.createElement("div");
-    msgDiv.classList.add("msg", "user-msg");
-    msgDiv.textContent = text;
-    chatContainer.appendChild(msgDiv);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-  }
+  // додаємо останнє повідомлення в DOM без повного ререндеру
+  const bubble = document.createElement("div");
+  bubble.classList.add("msg", "user-msg");
+  bubble.textContent = text;
+  chatContainer.appendChild(bubble);
+  chatContainer.scrollTop = chatContainer.scrollHeight;
 
-  // очищаємо інпут і деактивуємо кнопку
   input.value = "";
+  autoResizeTextarea();
   sendBtn.disabled = true;
   sendBtn.classList.remove("active");
 
   renderHistory();
 }
 
-// ================== EVENT HANDLERS ==================
+// ================== TEXTAREA AUTO-RESIZE ==================
+function autoResizeTextarea() {
+  if (!input) return;
+  input.style.height = "auto";
+  input.style.height = input.scrollHeight + "px";
+}
 
-// Enter = відправка, Shift+Enter = новий рядок
+// ================== EVENT LISTENERS ==================
+
+// Enter = send, Shift+Enter = новий рядок
 if (input) {
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -154,6 +179,7 @@ if (input) {
   });
 
   input.addEventListener("input", () => {
+    autoResizeTextarea();
     const hasText = input.value.trim().length > 0;
     sendBtn.disabled = !hasText;
     if (hasText) {
@@ -168,15 +194,15 @@ if (sendBtn) {
   sendBtn.addEventListener("click", sendMessage);
 }
 
-// New Chat → стартовий екран, чистий інпут
+// New Chat → чистий старт, hero, без активного чату
 if (newChatBtn) {
   newChatBtn.addEventListener("click", () => {
     activeChatId = null;
+    saveActiveChat();
 
-    // показуємо hero-текст
-    if (heroTitle) heroTitle.style.display = "";
-    if (heroIntro) heroIntro.style.display = "";
-
+    if (heroSection) {
+      heroSection.style.display = "block";
+    }
     if (chatContainer) {
       chatContainer.style.display = "none";
       chatContainer.innerHTML = "";
@@ -184,9 +210,12 @@ if (newChatBtn) {
 
     if (input) {
       input.value = "";
+      autoResizeTextarea();
     }
     sendBtn.disabled = true;
     sendBtn.classList.remove("active");
+
+    renderHistory();
   });
 }
 
@@ -194,5 +223,25 @@ if (newChatBtn) {
 loadChats();
 renderHistory();
 
-// якщо є активні чати з минулого — нічого не відкриваємо автоматично,
-// користувач сам клікне в sidebar
+activeChatId = loadActiveChat();
+
+if (activeChatId) {
+  const chat = chats.find((c) => c.id === activeChatId);
+  if (chat) {
+    if (heroSection) heroSection.style.display = "none";
+    if (chatContainer) {
+      chatContainer.style.display = "block";
+      renderMessages(chat);
+    }
+  } else {
+    // якщо в localStorage залишився старий id, а чату вже нема
+    activeChatId = null;
+    saveActiveChat();
+    if (heroSection) heroSection.style.display = "block";
+    if (chatContainer) chatContainer.style.display = "none";
+  }
+} else {
+  // немає активного чату → завжди старт з hero
+  if (heroSection) heroSection.style.display = "block";
+  if (chatContainer) chatContainer.style.display = "none";
+}

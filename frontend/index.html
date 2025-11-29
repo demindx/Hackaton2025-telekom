@@ -11,6 +11,19 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const words = document.querySelectorAll(".small-word");
+
+    const baseDelay = 1.2;  // коли intro починає (після великого h1)
+    const step = 0.05;      // затримка між словами
+
+    words.forEach((word, i) => {
+        word.style.animationDelay = (baseDelay + i * step) + "s";
+    });
+});
+</script>
+
 <body>
 
   <div class="overlay"></div>
@@ -60,20 +73,38 @@
         <span class="word">Complete results.</span>
       </h1>
 
-      <div class="intro">
-        This agent understands your goal, creates a <span class="strong">structured plan</span>, and
-        <span class="strong">executes</span> it independently using <span class="strong">tools</span> and
-        <span class="strong">external data</span> — behaving like a reliable digital teammate.
-      </div>
+      <div class="intro ">
+  <span class="small-word">This</span>
+  <span class="small-word">agent</span>
+  <span class="small-word">understands</span>
+  <span class="small-word">your</span>
+  <span class="small-word">goal,</span>
+  <span class="small-word">creates</span>
+  <span class="small-word">a</span>
+  <span class="small-word">structured</span>
+  <span class="small-word">plan,</span>
+  <span class="small-word">and</span>
+  <span class="small-word">executes</span>
+  <span class="small-word">it</span>
+  <span class="small-word">independently</span>
+  <span class="small-word">using</span>
+  <span class="small-word">tools</span>
+  <span class="small-word">and</span>
+  <span class="small-word">external</span>
+  <span class="small-word">data</span>
+  <span class="small-word">—</span>
+  <span class="small-word">behaving</span>
+  <span class="small-word">like</span>
+  <span class="small-word">a</span>
+  <span class="small-word">reliable</span>
+  <span class="small-word">digital</span>
+  <span class="small-word">teammate.</span>
+</div>
+
     </div>
 
     <!-- CHAT MESSAGES -->
-    <div id="chat-container" class="chat-container" style="
-      display: none;
-      margin-left: 300px;
-      padding: 40px;
-      max-width: 900px;
-    "></div>
+<div id="chat-container" class="chat-container" style="display:none;"></div>
   </section>
 
 
@@ -94,12 +125,7 @@
 
       <button id="chat-send-btn" class="send-btn" disabled>
         <svg class="icon icon-send" viewBox="0 0 24 24">
-          <path d="M22 2L11 13"></path>
           <path d="M22 2L15 22 11 13 2 9 22 2z"></path>
-        </svg>
-        <svg class="icon icon-up" viewBox="0 0 24 24">
-          <path d="M12 19V5"></path>
-          <path d="M5 12l7-7 7 7"></path>
         </svg>
       </button>
     </div>
