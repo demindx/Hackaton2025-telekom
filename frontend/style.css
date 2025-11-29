@@ -521,7 +521,7 @@ section.features .feature-wide,
 section.features .feature-wide .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 section.features .feature-wide .title {
