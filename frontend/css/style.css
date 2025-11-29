@@ -218,6 +218,7 @@ html, body {
 
 .word {
   opacity: 0;
+  padding-bottom: 10px;
   display: inline-block;
   animation: fadeWord 0.7s forwards;
 }
@@ -236,6 +237,7 @@ html, body {
 
 .small-word {
   opacity: 0;
+  padding-top: 5px;
   display: inline-block;
   animation: fadeSmall 0.5s forwards;
 }
