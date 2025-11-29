@@ -101,23 +101,44 @@
                     <div class="ff-6720dc1e8a283a1a894e8506__fields" data-ff-el="fields">
                       <!--tpl {% block fields %} tpl-->
 
-                      <div class="ff-6720dc1e8a283a1a894e8506__field fd-form-group">
+                      <div class="ff-6720dc1e8a283a1a894e8506__field fd-form-group search-wrapper">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+
                         <input id="ff-6720dc1e8a283a1a894e8506-email"
                           class="ff-6720dc1e8a283a1a894e8506__control fd-form-control" type="text" maxlength="255"
-                          name="email" placeholder="Enter your work email" data-ff-tab="email::submit" required=""
-                          value="">
+                          name="email" placeholder="Enter your request" data-ff-tab="loop::submit" required="" value="">
                       </div>
 
                       <input type="text" maxlength="255" name="confirm_email_address" style="display: none" value="">
-                      <!--tpl {% endblock %} tpl-->
                     </div>
 
-                    <div class="ff-6720dc1e8a283a1a894e8506__footer" data-ff-el="footer">
-                      <button type="submit" class="ff-6720dc1e8a283a1a894e8506__button fd-btn" data-ff-el="submit"
-                        data-ff-tab="submit">
-                        <span>Get Early Access</span>
-                      </button>
-                    </div>
+
+<div class="ff-6720dc1e8a283a1a894e8506__footer" data-ff-el="footer">
+  <button type="submit"
+    class="ff-6720dc1e8a283a1a894e8506__button fd-btn send-btn"
+    data-ff-el="submit" data-ff-tab="submit">
+    
+    <!-- Літачок -->
+    <svg class="icon icon-send" viewBox="0 0 24 24">
+      <path d="M22 2L11 13"></path>
+      <path d="M22 2L15 22 11 13 2 9 22 2z"></path>
+    </svg>
+
+    <!-- Стрілка вгору -->
+    <svg class="icon icon-up" viewBox="0 0 24 24">
+      <path d="M12 19V5"></path>
+      <path d="M5 12l7-7 7 7"></path>
+    </svg>
+
+  </button>
+</div>
+
+
+
                   </div>
                   <div class="ff-6720dc1e8a283a1a894e8506__success fd-form-success" data-ff-el="success">
                     <div class="ff-6720dc1e8a283a1a894e8506__success-message thank-you">
@@ -140,21 +161,6 @@
         </div>
 
       </div>
-
-      <div class="message">Good Morning</div>
-
-
-     
-
-
-  </section>
-  <section class="features">
-      <div class ="feature feature-wide">
-        <div class ="content">
-          <div class ="title">тут буде чат
-          </div>
-        </div>
-  </section>
 
 
 </body>
