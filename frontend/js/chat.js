@@ -122,7 +122,7 @@ function openChat(id) {
 }
 
 // ================== SEND MESSAGE ==================
-function sendMessage() {
+async function sendMessage() {
   if (!input || !chatContainer) return;
 
   const text = input.value.trim();
@@ -156,6 +156,66 @@ function sendMessage() {
   autoResizeTextarea();
   sendBtn.disabled = true;
   sendBtn.classList.remove("active");
+
+  // Временное сообщение
+  const typingDiv = document.createElement("div");
+  typingDiv.classList.add("msg", "bot-msg", "typing");
+  typingDiv.textContent = "Генерирую отчёт, подождите...";
+  chatContainer.appendChild(typingDiv);
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+
+  // ---------- Подключаем WebSocket ----------
+  console.log("Создаём WebSocket...");
+  const ws = new WebSocket("ws://localhost:8080/ws");
+
+  ws.onopen = () => {
+    console.log("WebSocket соединение установлено.");
+    console.log("Отправляем prompt на сервер:", text);
+    ws.send(text);
+  };
+
+  ws.onmessage = (event) => {
+    const msg = event.data;
+    console.log("Получено сообщение от сервера:", msg);
+
+    // Обновляем сообщение прогресса
+    typingDiv.textContent = msg;
+
+    // Если пришёл финальный путь PDF
+    if (msg.startsWith("done:")) {
+      const pdfPath = msg.split(" ")[4];
+      console.log("Генерация завершена. PDF готов по пути:", pdfPath);
+      window.open(pdfPath, "_blank");
+      typingDiv.remove();
+
+      const botDiv = document.createElement("div");
+      botDiv.classList.add("msg", "bot-msg");
+      botDiv.textContent = "Отчёт готов. PDF откроется в новой вкладке.";
+      chatContainer.appendChild(botDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      sendBtn.disabled = false;
+      sendBtn.classList.add("active");
+      ws.close();
+    }
+  };
+
+  ws.onerror = (err) => {
+    console.error("Ошибка WebSocket:", err);
+    typingDiv.remove();
+
+    const errDiv = document.createElement("div");
+    errDiv.classList.add("msg", "error-msg");
+    errDiv.textContent = "Ошибка сервера WebSocket.";
+    chatContainer.appendChild(errDiv);
+
+    sendBtn.disabled = false;
+    sendBtn.classList.add("active");
+  };
+
+  ws.onclose = () => {
+    console.log("WebSocket соединение закрыто.");
+  };
 
   renderHistory();
 }
